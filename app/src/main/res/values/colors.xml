@@ -9,9 +9,9 @@
     <color name="white">#FFFFFFFF</color>
 
     <!-- TODO change app colors -->
-    <color name="primaryColor">#031A1A</color>
+    <color name="primaryColor">@color/purple_500</color>
     <color name="primaryLightColor">#172929</color>
-    <color name="primaryDarkColor">#000000</color>
+    <color name="primaryDarkColor">@color/purple_700</color>
     <color name="secondaryColor">#BFFB93</color>
     <color name="secondaryLightColor">#f3ffc5</color>
     <color name="secondaryDarkColor">#8dc864</color>
