@@ -7,4 +7,9 @@
     <string name="mainfragment_mp_pay">Pagar</string>
     <string name="mercadopago_public_key">TEST-3953f678-48d2-46db-846b-fd54b5f5a174</string>
     <string name="mercadopago_access_token">TEST-4654269433620342-122313-61e027b38ab04add3aa879b7ae8907a4-290410379</string>
+    <string name="mainfragment_til_item_title">Titulo Item</string>
+    <string name="mainfragment_til_item_desc">Descripción</string>
+    <string name="mainfragment_til_item_title_helper">Piano, notebook, mouse, etc</string>
+    <string name="mainfragment_np_quantity">Cantidad</string>
+    <string name="mainfragment_title_item">Crear item a pagar</string>
 </resources>

@@ -25,13 +25,18 @@ class MainFragmentViewModel @Inject constructor(
     val uiState: LiveData<MainFragmentUiModel>
         get() = _uiState
 
-
-    fun getMessage(s: String) = viewModelScope.launch {
-        emitUiModel(onShowMessageEvent = Event(s))
-    }
-
-    fun startMPCheckout(amount: Int) = viewModelScope.launch {
-        getCheckoutPreferenceIdUseCase(amount).collect { result ->
+    fun startMPCheckout(
+        amount: Int,
+        itemName: String,
+        itemDesc: String,
+        itemQuantity: Int
+    ) = viewModelScope.launch {
+        getCheckoutPreferenceIdUseCase(
+            amount,
+            itemName,
+            itemDesc,
+            itemQuantity
+        ).collect { result ->
             when (result) {
                 is Result.Success -> {
                     emitUiModel(onOpenMPCheckout = Event(result.data.id))

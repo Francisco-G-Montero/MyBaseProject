@@ -32,22 +32,26 @@ class MainFragment : BaseFragment<FragmentMainBinding, MainFragmentViewModel>() 
         val checkout = MercadoPagoCheckout.Builder(publicKey, checkoutId)
             .build()
         checkout.startPayment(requireContext(), REQUEST_MP)
-
     }
 
     override fun setupViewModel() {
         super.setupViewModel()
         mViewModel.uiState.observe(viewLifecycleOwner, uiModelObserver)
-        //TODO eliminar mensaje example
-        //mViewModel.getMessage("funciona!")
     }
 
     override fun setupUiElements() {
         super.setupUiElements()
         mBinding.etAmount.setText("0")
         mBinding.btnMercado.setOnClickListener {
-            mViewModel.startMPCheckout(mBinding.etAmount.text.toString().toInt())
+            mViewModel.startMPCheckout(
+                mBinding.etAmount.text.toString().toInt(),
+                mBinding.etItemTitle.text.toString(),
+                mBinding.etItemDesc.text.toString(),
+                mBinding.npQuantity.value
+            )
         }
+        mBinding.npQuantity.minValue = 1
+        mBinding.npQuantity.maxValue = 10
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {

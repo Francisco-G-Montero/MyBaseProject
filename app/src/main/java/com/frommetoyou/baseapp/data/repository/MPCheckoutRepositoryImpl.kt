@@ -21,10 +21,7 @@ class MPCheckoutRepositoryImpl @Inject constructor(
     ): Flow<Result<CheckoutPreferenceDto>> = flow {
         emit(mpCheckoutApiService.getCheckoutPreferenceId(accessToken, mpCheckoutRequest))
     }
-        .catch { error ->
-            error
-            emit(error.getResponseError())
-        }
+        .catch { error -> emit(error.getResponseError()) }
         .map { result -> result.parseResponse() }
         .flowOn(coroutinesDispatcherProvider.io)
 }

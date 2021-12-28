@@ -16,21 +16,36 @@ class GetCheckoutPreferenceIdUseCase @Inject constructor(
     private val mpCheckoutRepository: MPCheckoutRepository,
     @ApplicationContext private val context: Context,
 ) {
-    suspend operator fun invoke(amount: Int): Flow<Result<CheckoutPreferenceDto>> {
+    suspend operator fun invoke(
+        amount: Int,
+        itemName: String,
+        itemDesc: String,
+        itemQuantity: Int
+    ): Flow<Result<CheckoutPreferenceDto>> {
         val accessToken = context.getString(R.string.mercadopago_access_token)
-        val dummyRequest = createCheckoutRequest(amount)
+        val dummyRequest = createCheckoutRequest(
+            amount,
+            itemName,
+            itemDesc,
+            itemQuantity
+        )
         return mpCheckoutRepository.getCheckoutPreferenceId(accessToken, dummyRequest)
     }
 
-    private fun createCheckoutRequest(amount: Int): MPCheckoutRequest {
+    private fun createCheckoutRequest(
+        amount: Int,
+        itemName: String,
+        itemDesc: String,
+        itemQuantity: Int
+    ): MPCheckoutRequest {
         val item = Item(
             "ARS",
-            "Teclado de 64 teclas. Negro. Nuevo",
-            1,
-            "Teclado Korg ESP256",
+            itemDesc,
+            itemQuantity,
+            itemName,
             amount.toDouble()
         )
-        val payer = Payer("gabixp45@gmail.com")
+        val payer = Payer("test@testuser.com")
         val itemList = listOf(item)
         return MPCheckoutRequest(itemList, payer)
     }
