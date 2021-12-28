@@ -10,4 +10,9 @@
         android:name="com.frommetoyou.baseapp.presentation.ui.fragment.MainFragment"
         android:label="fragment_main"
         tools:layout="@layout/fragment_main" />
+    <fragment
+        android:id="@+id/contactsFragment"
+        android:name="com.frommetoyou.baseapp.presentation.ui.fragment.ContactsFragment"
+        android:label="fragment_contacts"
+        tools:layout="@layout/fragment_contacts" />
 </navigation>

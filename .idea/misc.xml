@@ -4,7 +4,9 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Android/Android projects/misApps/BaseApp/app/src/main/res/layout/activity_main.xml" value="0.19157608695652173" />
+        <entry key="..\:/Android/Android projects/misApps/BaseApp/app/src/main/res/layout/fragment_contacts.xml" value="0.2015625" />
         <entry key="..\:/Android/Android projects/misApps/BaseApp/app/src/main/res/layout/fragment_main.xml" value="0.33" />
+        <entry key="..\:/Android/Android projects/misApps/BaseApp/app/src/main/res/menu/bottom_nav_menu.xml" value="0.2015625" />
       </map>
     </option>
   </component>

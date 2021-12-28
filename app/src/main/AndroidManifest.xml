@@ -3,6 +3,7 @@
     package="com.frommetoyou.baseapp">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
 
     <application
         android:name=".presentation.App"
@@ -37,13 +38,13 @@
             android:screenOrientation="sensorPortrait"
             android:theme="@style/Theme.MercadoPagoTheme.NoActionBar" />
         <activity
-            android:exported="true"
             android:name="com.mercadopago.android.px.internal.features.checkout.CheckoutActivity"
+            android:exported="true"
             android:label=""
             android:launchMode="singleTask"
             android:screenOrientation="sensorPortrait"
             android:theme="@style/Theme.MercadoPagoTheme.NoActionBar"
-            android:windowSoftInputMode="adjustResize" >
+            android:windowSoftInputMode="adjustResize">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
 
@@ -68,93 +69,93 @@
             </intent-filter>
         </activity>
         <activity
-            android:exported="true"
             android:name="com.mercadopago.android.px.internal.features.guessing_card.GuessingCardActivity"
+            android:exported="true"
             android:screenOrientation="sensorPortrait"
             android:theme="@style/Theme.MercadoPagoTheme.NoActionBar"
             android:windowSoftInputMode="adjustResize" />
         <activity
-            android:exported="true"
             android:name="com.mercadopago.android.px.internal.features.payment_vault.PaymentVaultActivity"
+            android:exported="true"
             android:screenOrientation="sensorPortrait"
             android:theme="@style/Theme.MercadoPagoTheme.NoActionBar" />
         <activity
-            android:exported="true"
             android:name="com.mercadopago.android.px.internal.features.installments.InstallmentsActivity"
+            android:exported="true"
             android:screenOrientation="sensorPortrait"
             android:theme="@style/Theme.MercadoPagoTheme.NoActionBar" />
         <activity
-            android:exported="true"
             android:name="com.mercadopago.android.px.internal.features.IssuersActivity"
+            android:exported="true"
             android:screenOrientation="sensorPortrait"
             android:theme="@style/Theme.MercadoPagoTheme.NoActionBar" />
         <activity
-            android:exported="true"
             android:name="com.mercadopago.android.px.internal.features.cardvault.CardVaultActivity"
+            android:exported="true"
             android:screenOrientation="sensorPortrait"
             android:theme="@style/Theme.MercadoPagoTheme.NoActionBar" />
         <activity
-            android:exported="true"
             android:name="com.mercadopago.android.px.internal.features.ErrorActivity"
+            android:exported="true"
             android:screenOrientation="sensorPortrait"
             android:theme="@style/Theme.MercadoPagoTheme.NoActionBar" />
         <activity
-            android:exported="true"
             android:name="com.mercadopago.android.px.internal.features.payment_result.PaymentResultActivity"
+            android:exported="true"
             android:label=""
             android:screenOrientation="sensorPortrait"
             android:theme="@style/Theme.MercadoPagoTheme.NoActionBar" />
         <activity
-            android:exported="true"
             android:name="com.mercadopago.android.px.internal.features.SecurityCodeActivity"
+            android:exported="true"
             android:label=""
             android:screenOrientation="sensorPortrait"
             android:theme="@style/Theme.MercadoPagoTheme.NoActionBar"
             android:windowSoftInputMode="stateVisible" />
         <activity
-            android:exported="true"
             android:name="com.mercadopago.android.px.internal.features.PaymentTypesActivity"
+            android:exported="true"
             android:screenOrientation="sensorPortrait"
             android:theme="@style/Theme.MercadoPagoTheme.NoActionBar" />
         <activity
-            android:exported="true"
             android:name="com.mercadopago.android.px.internal.features.review_payment_methods.ReviewPaymentMethodsActivity"
+            android:exported="true"
             android:screenOrientation="sensorPortrait"
             android:theme="@style/Theme.MercadoPagoTheme.NoActionBar" />
         <activity
-            android:exported="true"
             android:name="com.mercadopago.android.px.internal.features.payer_information.PayerInformationActivity"
+            android:exported="true"
             android:screenOrientation="sensorPortrait"
             android:theme="@style/Theme.MercadoPagoTheme.NoActionBar" />
         <activity
-            android:exported="true"
             android:name="com.mercadopago.android.px.internal.features.plugins.PaymentProcessorActivity"
+            android:exported="true"
             android:screenOrientation="sensorPortrait"
             android:theme="@style/Theme.MercadoPagoTheme.NoActionBar" />
         <activity
-            android:exported="true"
             android:name="com.mercadopago.android.px.internal.features.business_result.BusinessPaymentResultActivity"
+            android:exported="true"
             android:label=""
             android:screenOrientation="sensorPortrait"
             android:theme="@style/Theme.MercadoPagoTheme.NoActionBar" />
         <activity
-            android:exported="true"
             android:name="com.mercadopago.android.px.internal.features.review_and_confirm.ReviewAndConfirmActivity"
+            android:exported="true"
             android:screenOrientation="sensorPortrait"
             android:theme="@style/Theme.MercadoPagoTheme.NoActionBar" />
         <activity
-            android:exported="true"
             android:name="com.mercadopago.android.px.internal.features.bank_deal_detail.BankDealDetailActivity"
+            android:exported="true"
             android:screenOrientation="sensorPortrait"
             android:theme="@style/Theme.MercadoPagoTheme.NoActionBar" />
         <activity
-            android:exported="true"
             android:name="com.mercadopago.android.px.internal.features.guessing_card.card_association_result.CardAssociationResultSuccessActivity"
+            android:exported="true"
             android:screenOrientation="sensorPortrait"
             android:theme="@style/ToolbarTransparentTheme" />
         <activity
-            android:exported="true"
             android:name="com.mercadopago.android.px.internal.features.guessing_card.card_association_result.CardAssociationResultErrorActivity"
+            android:exported="true"
             android:screenOrientation="sensorPortrait"
             android:theme="@style/ToolbarTransparentTheme" />
 

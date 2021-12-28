@@ -12,8 +12,9 @@ import android.content.Intent
 import com.mercadopago.android.px.model.exceptions.MercadoPagoError
 import android.app.Activity.RESULT_CANCELED
 import com.frommetoyou.baseapp.R
+import kotlinx.coroutines.InternalCoroutinesApi
 
-
+@InternalCoroutinesApi
 @AndroidEntryPoint
 class MainFragment : BaseFragment<FragmentMainBinding, MainFragmentViewModel>() {
     //TODO eliminar clase example ↑

@@ -12,4 +12,7 @@
     <string name="mainfragment_til_item_title_helper">Piano, notebook, mouse, etc</string>
     <string name="mainfragment_np_quantity">Cantidad</string>
     <string name="mainfragment_title_item">Crear item a pagar</string>
+    <string name="bottom_navigation_contacts">Contactos</string>
+    <string name="bottom_navigation_home">Home</string>
+    <string name="contacts_title">Leyendo contactos...</string>
 </resources>
