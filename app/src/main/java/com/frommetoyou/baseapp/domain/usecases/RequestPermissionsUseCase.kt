@@ -1,4 +1,4 @@
-package com.intermedia.daiana.scan.domain.usecases.local
+package com.frommetoyou.baseapp.domain.usecases
 
 import android.content.Context
 import android.content.pm.PackageManager

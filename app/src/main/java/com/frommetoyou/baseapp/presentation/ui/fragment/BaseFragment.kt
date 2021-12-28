@@ -30,6 +30,10 @@ abstract class BaseFragment<T : ViewDataBinding, VM : BaseViewModel> : Fragment(
         return mBinding.root
     }
 
+    private val showLoadingObserver = Observer<Boolean> {
+        if (it) showLoading() else hideLoading()
+    }
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         loadingView = activity?.findViewById(R.id.circular_progress_indicator)
@@ -42,11 +46,6 @@ abstract class BaseFragment<T : ViewDataBinding, VM : BaseViewModel> : Fragment(
     protected open fun setupViewModel() {
         mViewModel.showLoading.observe(viewLifecycleOwner, showLoadingObserver)
     }
-
-    private val showLoadingObserver = Observer<Boolean> {
-        if (it) showLoading() else hideLoading()
-    }
-
     protected open fun showLoading() {
         loadingView?.visibility = View.VISIBLE
     }
