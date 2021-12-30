@@ -15,4 +15,5 @@
     <string name="bottom_navigation_contacts">Contactos</string>
     <string name="bottom_navigation_home">Home</string>
     <string name="contacts_title">Leyendo contactos...</string>
+    <string name="mainfragment_mb_buy">Comprar un Comic!</string>
 </resources>

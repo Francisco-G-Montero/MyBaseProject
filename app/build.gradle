@@ -78,4 +78,7 @@ dependencies {
 
     //mercadopago SDK
     implementation 'com.mercadopago.android.px:checkout:4.+'
+
+    //Mi propio SDK
+    implementation 'com.github.Francisco-G-Montero:MoviesBuyerSDK:0.3.5'
 }

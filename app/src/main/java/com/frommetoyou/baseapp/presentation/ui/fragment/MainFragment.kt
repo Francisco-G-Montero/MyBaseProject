@@ -1,5 +1,6 @@
 package com.frommetoyou.baseapp.presentation.ui.fragment
 
+import android.app.Activity
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
 import com.frommetoyou.baseapp.databinding.FragmentMainBinding
@@ -11,7 +12,10 @@ import com.mercadopago.android.px.model.Payment
 import android.content.Intent
 import com.mercadopago.android.px.model.exceptions.MercadoPagoError
 import android.app.Activity.RESULT_CANCELED
+import androidx.activity.result.contract.ActivityResultContracts
 import com.frommetoyou.baseapp.R
+import com.frommetoyou.moviesbuyer.presentation.ui.activity.MoviesBuyerActivity
+import com.frommetoyou.moviesbuyer.presentation.util.MoviesBuyer
 import kotlinx.coroutines.InternalCoroutinesApi
 
 @InternalCoroutinesApi
@@ -53,6 +57,17 @@ class MainFragment : BaseFragment<FragmentMainBinding, MainFragmentViewModel>() 
         }
         mBinding.npQuantity.minValue = 1
         mBinding.npQuantity.maxValue = 10
+        mBinding.btnMoviesBuyer.setOnClickListener {
+            MoviesBuyer.startPurchase(requireContext(), resultLauncher)
+        }
+    }
+
+    val resultLauncher = registerForActivityResult(
+        ActivityResultContracts.StartActivityForResult()
+    ) {
+        if (it.resultCode == Activity.RESULT_OK){
+            it.data?.getStringExtra("comic")?.let { it1 -> showMessage(it1) }
+        }
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
